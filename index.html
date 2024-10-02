@@ -8,6 +8,45 @@
     <title>Form with validation</title>
   </head>
   <body>
+    <main>
+      <section>
+        <div class="container">
+          <h1>Регистрация</h1>
+
+          <form action="index.html">
+            <label>Введите имя:<input type="text" /></label>
+
+            <label>Введите email:<input type="email" /></label>
+
+            <label>Введите возраст:<input type="text" /></label>
+
+            <label>Мужчина<input type="radio" name="sex" /></label>
+            <label>Женщина<input type="radio" name="sex" /></label>
+
+            <label>
+              Ваша профессия:
+              <select name="" id="">
+                <option value="" disabled selected hidden>
+                  Выбрать профессию
+                </option>
+                <option value="">Врач</option>
+                <option value="">Программист</option>
+                <option value="">Учитель</option>
+                <option value="">Дизайнер</option>
+                <option value="">Инженер</option>
+                <option value="">Продавец</option>
+                <option value="">Другое</option>
+              </select>
+            </label>
+
+            <label>Введите пароль:<input type="password" /></label>
+            <label><input type="checkbox" />Согласие на обработку данных</label>
+
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
     <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
