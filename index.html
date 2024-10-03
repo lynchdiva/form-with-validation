@@ -9,42 +9,111 @@
   </head>
   <body>
     <main>
-      <section>
-        <div class="container">
-          <h1>Регистрация</h1>
+      <section class="registration">
+        <form class="registration__form" action="index.html">
+          <h1 class="registration__title">Регистрация</h1>
 
-          <form action="index.html">
-            <label>Введите имя:<input type="text" /></label>
+          <label class="registation__label"
+            ><span class="registration__input-title">Введите имя:</span
+            ><input
+              class="registration__input"
+              type="text"
+              name="name"
+              minlength="2"
+              maxlength="20"
+              placeholder="Имя"
+              required
+              pattern=""
+              autocomplete="off"
+          /></label>
 
-            <label>Введите email:<input type="email" /></label>
+          <label class="registation__label"
+            ><span class="registration__input-title">Введите email:</span
+            ><input
+              class="registration__input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              autocomplete="off"
+          /></label>
 
-            <label>Введите возраст:<input type="text" /></label>
+          <label class="registation__label"
+            ><span class="registration__input-title">Введите возраст:</span
+            ><input
+              class="registration__input"
+              type="text"
+              name="age"
+              placeholder="Возраст"
+              required
+              autocomplete="off"
+          /></label>
 
-            <label>Мужчина<input type="radio" name="sex" /></label>
-            <label>Женщина<input type="radio" name="sex" /></label>
+          <fieldset class="registation__fieldset">
+            <label class="registation__label">
+              <span class="registration__radio-wrapper">
+                <input class="registration__radio" type="radio" name="sex" />
+                <span class="registration__radio-title"></span>
+              </span>
+              Женщина
+            </label>
 
-            <label>
-              Ваша профессия:
-              <select name="" id="">
+            <label class="registation__label">
+              <span class="registration__radio-wrapper">
+                <input class="registration__radio" type="radio" name="sex" />
+                <span class="registration__radio-title"></span>
+              </span>
+              Мужчина
+            </label>
+          </fieldset>
+
+          <label class="registation__label">
+            <span class="registration__input-title">Ваша профессия:</span>
+            <span class="registration__select-wrapper">
+              <select
+                class="registration__select"
+                name="selectProfession"
+                id="selectProfession"
+                required
+              >
                 <option value="" disabled selected hidden>
                   Выбрать профессию
                 </option>
-                <option value="">Врач</option>
-                <option value="">Программист</option>
-                <option value="">Учитель</option>
-                <option value="">Дизайнер</option>
-                <option value="">Инженер</option>
-                <option value="">Продавец</option>
-                <option value="">Другое</option>
+                <option value="doctor">Врач</option>
+                <option value="programmer">Программист</option>
+                <option value="teacher">Учитель</option>
+                <option value="designer">Дизайнер</option>
+                <option value="engineer">Инженер</option>
+                <option value="saler">Продавец</option>
+                <option value="other">Другое</option>
               </select>
-            </label>
+            </span>
+          </label>
 
-            <label>Введите пароль:<input type="password" /></label>
-            <label><input type="checkbox" />Согласие на обработку данных</label>
+          <label class="registation__label">
+            <span class="registration__input-title">Введите пароль:</span>
+            <input
+              class="registration__input"
+              type="password"
+              placeholder="Пароль"
+              required
+              minlength="8"
+              pattern=""
+              autocomplete="off"
+          /></label>
 
-            <button type="submit">Отправить</button>
-          </form>
-        </div>
+          <label class="registation__label">
+            <span class="registration__checkbox-wrapper">
+              <input class="registration__checkbox" type="checkbox" required />
+              <span class="registration__checkbox-title"></span>
+            </span>
+            Согласие на обработку данных
+          </label>
+
+          <button class="registration__button" type="submit" disabled>
+            Отправить
+          </button>
+        </form>
       </section>
     </main>
     <script src="./assets/scripts/index.js"></script>
