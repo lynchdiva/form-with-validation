@@ -8,6 +8,7 @@
 
 body {
   min-height: 100vh;
+  min-width: 320px;
   padding: 50px;
   display: flex;
   align-items: center;
@@ -37,25 +38,71 @@ body {
   margin-bottom: 1em;
 }
 
+.registration__input-title {
+  width: 11em;
+}
+
+.registration__required-mark {
+  margin-left: 5px;
+
+  color: rgb(165, 37, 37);
+}
+
+.registration__list {
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: 1em;
+
+  list-style: none;
+  transition: max-height 0.8s ease-in-out;
+}
+
+.registation__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+
+  font-style: italic;
+  font-size: 0.8em;
+  color: rgba(244, 244, 238, 0.5);
+}
+
+.registation__item-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.3em;
+  flex: none;
+}
+
+.registation__item-icon_hidden {
+  display: none;
+}
+
 .registration__input,
 .registration__select,
-.registration__button {
+.registration__button,
+.registration__list,
+.registration__error {
   width: 20em;
   margin-left: auto;
+}
+
+.registration__input:focus,
+.registration__select:focus {
+  outline-color: rgb(88, 88, 183);
+  outline-width: 2px;
+  outline-offset: 0;
 }
 
 .registration__input,
 .registration__select {
   padding: 0.6em 0.8em;
+
   color: rgb(244, 244, 238);
 
   border: 1px solid rgb(244, 244, 238);
   border-radius: 0.3em;
   background-color: transparent;
-}
-
-.registration__input-title {
-  width: 11em;
 }
 
 .registation__fieldset {
@@ -76,6 +123,7 @@ body {
 .registration__radio {
   width: 1em;
   height: 1em;
+
   opacity: 0;
 }
 
@@ -86,6 +134,7 @@ body {
   left: 0;
   width: 1em;
   height: 1em;
+
   border: 1px solid rgb(244, 244, 238);
   border-radius: 100%;
   cursor: pointer;
@@ -118,6 +167,7 @@ body {
 .registration__checkbox {
   width: 1.5em;
   height: 1.5em;
+
   opacity: 0;
 }
 
@@ -128,6 +178,7 @@ body {
   left: 0;
   width: 1.5em;
   height: 1.5em;
+
   border: 1px solid rgb(244, 244, 238);
   border-radius: 0.3em;
   cursor: pointer;
@@ -157,6 +208,7 @@ body {
   z-index: -1;
   width: 0.8em;
   height: 0.8em;
+
   background-image: url(../icons/arrow-down.svg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -186,4 +238,23 @@ body {
 
 .registration__button:not([disabled]):hover {
   background-color: rgb(52, 52, 243);
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  body {
+    font-size: 10px;
+  }
 }
