@@ -67,17 +67,19 @@ function validateRegistrationForm() {
   form.addEventListener('submit', event => {
     event.preventDefault();
 
-    requiredFields.forEach(item => {
-      if (item.name === 'sex' && !item.checked) {
-        return;
-      }
+    if (checkedAll) {
+      requiredFields.forEach(item => {
+        if (item.name === 'sex' && !item.checked) {
+          return;
+        }
 
-      console.log(item.value);
-    });
+        console.log(item.value);
+      });
 
-    form.reset();
+      form.reset();
 
-    button.disabled = true;
+      button.disabled = true;
+    }
   });
 
   form.addEventListener('reset', () => {
