@@ -123,7 +123,7 @@ function addValidationHandler(elem, attributeName, event) {
       const value = elem.value.trim();
       const constraintsList = getConstraintsItems(attributeName);
       const [patternItem] = constraintsList;
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
       let checked = true;
 

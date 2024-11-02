@@ -232,12 +232,12 @@ body {
   transition: background-color 0.2s linear;
 }
 
-.registration__button[disabled]:hover {
+.registration__button[disabled] {
   background-color: rgb(140, 140, 157);
 }
 
-.registration__button:not([disabled]):hover {
-  background-color: rgb(52, 52, 243);
+.registration__button:not([disabled]) {
+  background-color: rgb(81, 81, 247);
 }
 
 @media screen and (max-width: 767px) {
